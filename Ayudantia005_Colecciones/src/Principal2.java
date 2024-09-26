@@ -1,13 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author patri
- */
+// Crear un menu que permita ingresar nombres y 
+// apellidos y por otra parte sus notas y otra para listarlos.
+// Solicitar los datos por teclado.
 public class Principal2 {
     
 }
