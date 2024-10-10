@@ -34,7 +34,7 @@ public class Mouse extends Producto{
     public String toString() {
         return super.toString() + 
                 "\nCantidad de Botones  = " + cantidadBotones + 
-                "\nEs Optico            = " + esOptico;
+                "\nEs Optico            = " + (esOptico?"Si":"No");
     }
     
     

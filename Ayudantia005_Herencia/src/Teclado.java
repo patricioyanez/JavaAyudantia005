@@ -34,7 +34,7 @@ public class Teclado extends Producto {
     public String toString() {
         return  super.toString() + 
                 "\nCantidad de Teclas   = " + cantidadTeclas + 
-                "\nEs Mecánico          = " + esMecanico;
+                "\nEs Mecánico          = " + (esMecanico?"Si":"No");
     }
     
     
