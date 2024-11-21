@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bd;
+package BDD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,7 +19,7 @@ public class Conexion {
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/PGY2121", "root", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java2024", "root", "");
             System.out.println("Conexión exitosa");
         } catch (SQLException e) {
             System.out.println("Error de conexión" + e.getMessage());

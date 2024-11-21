@@ -1,14 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controlador;
+// CRUD
 
-/**
- *
- * @author patri
- */
+import BDD.Conexion;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import modelo.Marca;
+
 public class ControladorMarca {
-    
+    public boolean agregar(Marca marca)
+    {
+        try
+        {
+            Conexion con = new Conexion();
+            Connection cx = con.obtenerConexion();
+            String sql = "INSERT INTO marca (nombre, habilitado)";
+            sql += " values (?,?)";
+            
+            PreparedStatement st = cx.prepareStatement(sql);
+            st.setString(1, marca.getNombre());
+            st.setInt(2, marca.isHabilitado()?1:0);
+            
+            st.executeUpdate();
+            st.close();
+            cx.close();
+            return true;
+        }
+        catch(Exception ex)
+        {
+            System.out.println("Error: " + ex.getMessage());
+        }
+        return false;        
+    }
 }
